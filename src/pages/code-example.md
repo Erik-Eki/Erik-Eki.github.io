@@ -1,4 +1,12 @@
 ---
+title: "Page example"
+author: "Erik"
+---
+
+## Here's how simple this first page is using Astro!
+
+```astro
+---
 import "../styles/global.css"
 
 // Welcome to Astro! Everything between these triple-dash code fences
@@ -41,3 +49,4 @@ import {Content as CodeExample} from "../pages/code-example.md";
     </ul> -->
   </body>
 </html>
+```

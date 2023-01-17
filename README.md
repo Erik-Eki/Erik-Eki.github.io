@@ -2,11 +2,6 @@
 
 Hosting my bad website which I mainly created to practice and try out the hot &amp; popular frameworks.
 
-
-# How to create Astro project
-
-`npm create astro@latest`
-
 ---
 
 ## Tech stack
