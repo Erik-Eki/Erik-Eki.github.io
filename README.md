@@ -11,10 +11,14 @@ Hosting my bad website which I mainly created to practice and try out the hot &a
 ## Backend
 - Qwik
 - Typescript
+- Algolia
 
 ## Database
-- Firebase OR SupaBase OR PocketBase
+- Firebase OR Supabase OR PocketBase
 
-## Build & Testing
+## Build
 - Vite
-- Vitest
+
+## Testing
+- Playwright
+- Hugo
