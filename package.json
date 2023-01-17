@@ -1,0 +1,25 @@
+{
+  "name": "erik-eki.github.io",
+  "version": "1.0.0",
+  "description": "ebin website",
+  "main": "",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Erik-Eki/Erik-Eki.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Erik-Eki/Erik-Eki.github.io/issues"
+  },
+  "homepage": "https://github.com/Erik-Eki/Erik-Eki.github.io#readme",
+  "dependencies": {
+    "astro": "^1.9.2"
+  }
+}
