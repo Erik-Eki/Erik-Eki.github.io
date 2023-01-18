@@ -8,12 +8,12 @@ Hosting my bad website which I mainly created to practice and try out the hot &a
 
 ## Frontend
 
-- Solid OR Svelte
-- Windi CSS
+- Svelte
+- Windi CSS OR TailwindCSS
 
 ## Backend
 
-- Qwik OR Astro
+- Astro
 - Typescript
 - Algolia
 
