@@ -1,5 +1,7 @@
 ---
-//const apikey = import.meta.env.API_KEY
+
+import Test1 from "../components/test.svelte"
+import Conversations from "../components/convo.jsx"
 
 import "../styles/global.css";
 
@@ -23,7 +25,7 @@ const pageSubtitle = "This page is for those who are craaaaazyyyyyyyy!";
     <link rel="icon" type="image/svgxml" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>GLORY TO THE GOD EMPEROR</title>
     <style>
       h1 {
         color: black;
@@ -35,7 +37,13 @@ const pageSubtitle = "This page is for those who are craaaaazyyyyyyyy!";
 
     <h1>{pageTitle}</h1>
 
+    <!-- <Test1/> -->
+    <!-- <Conversations client:load /> -->
+    <Conversations />
+
     <pre>{pageSubtitle}</pre>
+
+    
 
     <!-- <form
       method="post"
@@ -66,37 +74,13 @@ const pageSubtitle = "This page is for those who are craaaaazyyyyyyyy!";
     </form> -->
 
     
-    <div>Prompt:</div>
-    <input type="text" placeholder="Type something..." id="prompt-field"/>
-    <button type="button" id="send-button">Send</button>
-    <!-- <form
-        action="javascript:sendResponse()"
-    >
-    <button type="submit">
-        Send
-    </button>
-    </form> -->
 
-    <h2>Response</h2>
-    <pre id="output">
-    Response appears here.
-    </pre>
 
-    <h3>Raw output</h3>
-    <pre
-      id="raw-output">
-    No data here yet...
-      <!-- {JSON.stringify(data, null, 2)} -->
-    </pre>
+    
     <!-- <p>Post Archive:</p>
     <ul>
     {posts.map(post => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
     </ul> -->
     <Footer />
-
-    <script>
-
-      import "../scripts/fetch.js"
-    </script>
   </body>
 </html>

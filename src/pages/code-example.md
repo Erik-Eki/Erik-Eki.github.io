@@ -26,7 +26,7 @@ import {Content as CodeExample} from "../pages/code-example.md";
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>GLORY TO THE GOD EMPEROR</title>
     <style>
         h1 {
           color: black;
