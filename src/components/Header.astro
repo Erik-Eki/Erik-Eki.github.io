@@ -1,9 +1,37 @@
 ---
 import Navigation from '../components/Navigation.astro';
+import Hamburger from '../components/Hamburger.astro';
+
+const res = await fetch("http://localhost:3000/posts.json");
+const posts = await res.json()
+
+const q = Astro.url.searchParams.get("q")?.toLowerCase() ?? ""
+const filteredPost = posts.filter((p) => p.title.toLowerCase().includes(q))
+
+//console.log(`q = ${JSON.stringify(q)}`)
+//console.log(`filteredPost = ${JSON.stringify(filteredPost)}`)
 ---
 
 <header>
     <nav>
+        <Hamburger/>
         <Navigation/>
     </nav>
+
+    <form>
+        <input
+            type="text"
+            name="q"
+            value={q}
+            class="p-3 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-xl"
+            placeholder="Search"
+        />
+    </form>
+    <pre class="grid grid-cols-3 gap-5 mt-3">
+        {filteredPost.slice(0,10).map((p) => {
+            <a href={`/posts/${p.id}`}>
+                {JSON.stringify(p)}
+            </a>
+        })}
+    </pre>
 </header>

@@ -1,11 +1,12 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
 import Test2 from "../components/test2.svelte"
 
-import "../styles/global.css"
+import "../styles/global.scss"
 
 // Welcome to Astro! Everything between these triple-dash code fences
 // is your "component front matter". It never runs in the browser.
-console.log("This runs in your terminal, not the browser!");
+//console.log("This runs in your terminal, not the browser!");
 
 // Import a single file
 import {Content as CodeExample} from "../pages/code-example.md";
@@ -13,42 +14,29 @@ import {Content as CodeExample} from "../pages/code-example.md";
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-const pageTitle = "Ebin"
-
+const pageTitle = "Home Page"
 ---
 
 <!-- Below is your "component template." It's just HTML, but with
      some magic sprinkled in to help you build great templates. -->
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>GLORY TO THE GOD EMPEROR</title>
-    <style>
-        h1 {
-          color: black;
-        }
-      </style>
-  </head>
-  <body>
+<BaseLayout pageTitle={pageTitle}>
 
-    <Header />
-    
-    <h1>{pageTitle}</h1>
+  <Test2 />
 
-    <p><a href="https://github.com/Erik-Eki/Erik-Eki.github.io">Link to Github repo</a></p>
+  <h2>My awesome website subtitle</h2>
 
-    <CodeExample/>
+  <p><a href="https://github.com/Erik-Eki/Erik-Eki.github.io">Link to Github repo</a></p>
 
-    <!-- <p>Post Archive:</p>
-    <ul>
-    {posts.map(post => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
-    </ul> -->
+  <CodeExample/>
 
-    <Test2 />
+  <!-- <p>Post Archive:</p>
+  <ul>
+  {posts.map(post => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+  </ul> -->
 
-    <Footer/>
-  </body>
-</html>
+
+  <script>
+    import "../scripts/menu.js";
+  </script>
+
+</BaseLayout>

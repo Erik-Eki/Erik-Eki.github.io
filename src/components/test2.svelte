@@ -1,14 +1,14 @@
 <script>
-	let name = 'worl';
+	let name = 'Svelte';
 </script>
 
-<input bind:value={name}>
+<!-- <input bind:value={name}> -->
 
-<h1>Hello {name}!</h1>
+<h1>Testing {name}</h1>
 
 
 <!-- import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { Container, Row, Col } from 'reactstrap';

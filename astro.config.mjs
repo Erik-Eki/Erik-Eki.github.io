@@ -14,6 +14,7 @@ export default defineConfig({
   ,
 
   integrations: [svelte(), tailwind(), react()],
+  // This enables SSR
   output: "server",
   adapter: vercel()
 });

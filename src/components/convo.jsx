@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import OpenAI from "../../api/openai"
+import OpenAI from "../pages/api/openai"
 import vercel from '@astrojs/vercel/serverless';
 
 import Button from "@mui/material/Button";
@@ -36,18 +36,9 @@ function Conversations() {
   const [newPrompt, setNewPrompt] = useState("");
 
   useEffect(() => {
-    //function updateCurrentConversation()
-
-    // return function cleanup() {
-    //   setCurrentConversation(currentConversation)
-    // }
-    console.log("DATA CHANGED")
-    console.log(currentConversationMessages)
     let temp = currentConversation
     temp.messages = currentConversationMessages
     setCurrentConversation(temp)
-
-
   }, [currentConversationMessages])
 
 
@@ -100,9 +91,6 @@ function Conversations() {
     // TODO: Add message object to current conversation
     // TODO: Clear prompt
   }
-
-
-
 
   async function sendDataToOpenAI(prompt, id) {
   

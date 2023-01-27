@@ -7,7 +7,7 @@ author: "Erik"
 
 ```astro
 ---
-import "../styles/global.css"
+import "../styles/global.scss"
 
 // Welcome to Astro! Everything between these triple-dash code fences
 // is your "component front matter". It never runs in the browser.
