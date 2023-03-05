@@ -1,25 +1,58 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 
 const { frontmatter } = Astro.props;
-//width="300" 
+
+//const allPosts = await Astro.glob("../posts/*.md");
+//const uniqueTags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
 ---
 
+<style>
+  a {
+    color: #00539f;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+
+  .tag {
+    margin: 0.25em;
+    border: solid 1px rgb(134 25 143);
+    border-radius: 0.5em;
+    padding: 0.4em 1.2em;
+    font-size: 1.15em;
+    background-color: #f8fcfd;
+  }
+</style>
+
 <BaseLayout pageTitle={frontmatter.title}>
+  <div class="p-4 border-2 rounded-xl font-sans">
+    <img
+      src={frontmatter.image.url}
+      alt={frontmatter.image.alt}
+      class="w-full rounded-xl mb-5"
+    />
 
-<div class=" p-4 border-2 rounded-xl font-sans">
+    <p>{frontmatter.pubDate.slice(0, 10)} - {frontmatter.author}</p>
+    <p><em>{frontmatter.description}</em></p>
+  </div>
 
-<img 
-src={frontmatter.image.url} alt={frontmatter.image.alt} 
-class=" w-full rounded-xl mb-5"
-/>
+  <div>
+    <!-- <div class=" flex flex-row p-1"> -->
+      <div class="tags">
+    {frontmatter.tags.map((tag) => {
+      return (
+        <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
+        // <div class=" m-1 p-1 pl-4 pr-4 border rounded-sm border-fuchsia-800">
+          
+        // </div>
+      )
+    })}
+    </div>
+  </div>
 
-
-<p>{frontmatter.pubDate.slice(0,10)} - {frontmatter.author}</p>
-<p><em>{frontmatter.description}</em></p>
-
-</div>
-
-<slot />
-
+  <slot />
 </BaseLayout>

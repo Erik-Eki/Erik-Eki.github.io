@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Test1 from "../components/test.svelte"
-import Conversations from "../components/convo.jsx"
+//import Test1 from "../components/test.svelte"
 
 import "../styles/global.scss";
 
@@ -10,7 +9,7 @@ import "../styles/global.scss";
 console.log("This runs in your terminal, not the browser!");
 
 // Import a single file
-import { Content as CodeExample } from "../pages/code-example.md";
+import { Content as CodeExample } from "../pages/posts/code-example.md";
 
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
@@ -21,12 +20,7 @@ const pageSubtitle = "This page is for those who are craaaaazyyyyyyyy!";
 
 <BaseLayout pageTitle={pageTitle}>
 
-    <!-- <Test1/> -->
-    <Conversations client:load />
-
     <pre>{pageSubtitle}</pre>
-
-    
 
     <!-- <form
       method="post"

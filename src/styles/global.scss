@@ -1,6 +1,8 @@
 html {
   background-color: #f1f5f9;
   font-family: sans-serif;
+  min-height: 100%;
+  margin: 0;
 }
 
 body {
@@ -9,7 +11,18 @@ body {
   max-width: 120ch;
   padding: 1rem;
   line-height: 1.5;
+  min-height: 100%;
 }
+
+html.dark {
+  background-color: #1e1c25;
+  color: #fff;
+}
+
+.dark .nav-links a {
+  color: #fff;
+}
+
 
 * {
   box-sizing: border-box;
