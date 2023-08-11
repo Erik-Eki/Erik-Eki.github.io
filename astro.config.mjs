@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config';
 import svelte from "@astrojs/svelte";
 import tailwind from '@astrojs/tailwind';
 import react from "@astrojs/react";
-//import vercel from "@astrojs/vercel/serverless";
+import vercel from "@astrojs/vercel/serverless";
 import mdx from '@astrojs/mdx';
 import remarkToc from 'remark-toc';
 
@@ -24,8 +24,10 @@ export default defineConfig({
     // No `remarkPlugins` applied
     smartypants: true,
     gfm: true
-  })]
+  })],
   // This enables SSR
-  //output: "server",
-  //adapter: vercel()
+  output: 'server',
+  adapter: vercel({
+    analytics: true,
+  }),
 });
