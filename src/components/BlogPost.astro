@@ -1,0 +1,23 @@
+---
+const { title, author, url, pubDate } = Astro.props;
+---
+
+<li
+  class=" p-4 mt-4 mb-4 pt-4 pb-10 border rounded-md shadow-md border-emerald-700"
+>
+  <div class=" flex flex-col">
+  <div>
+    {new Date(pubDate).toLocaleDateString()}
+  </div>
+    <a 
+      href={url}
+      class="font-medium text-3xl"
+    >
+      {title}
+    </a>
+    
+    <div>
+      {author}
+    </div>
+  </div>
+</li>

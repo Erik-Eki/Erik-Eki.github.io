@@ -200,8 +200,14 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"main_page": {
-};
+		"mdx_test.mdx": {
+			id: "mdx_test.mdx";
+		slug: "mdx_test";
+		body: string;
+		collection: "main_page";
+		data: any
+		} & { render(): Render[".mdx"] };
+		};
 
 	};
 
