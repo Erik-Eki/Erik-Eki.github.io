@@ -199,6 +199,9 @@ declare module 'astro:content' {
 		ReturnTypeOrOriginal<Required<ContentConfig['collections'][C]>['schema']>
 	>;
 
+// 	type ContentEntryMap = {
+// 		"main_page": {
+// }	;
 	type ContentEntryMap = {
 		"mdx_test.mdx": {
 			id: "mdx_test.mdx";
@@ -207,8 +210,6 @@ declare module 'astro:content' {
 		collection: "main_page";
 		data: any
 		} & { render(): Render[".mdx"] };
-		};
-
 	};
 
 	type DataEntryMap = {
