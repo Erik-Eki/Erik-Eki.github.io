@@ -6,6 +6,10 @@ Hosting my bad website which I mainly created to practice and try out the hot &a
 
 ## Tech stack
 
+# SSR
+
+- Vecrel
+
 ## Frontend
 
 - Svelte
@@ -14,7 +18,7 @@ Hosting my bad website which I mainly created to practice and try out the hot &a
 ## Backend
 
 - Astro
-- Typescript
+- Javascript/Typescript
 - Algolia
 
 ## Database
