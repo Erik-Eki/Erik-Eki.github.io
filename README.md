@@ -1,35 +1,5 @@
 # Erik-Eki.github.io
 
-Hosting my bad website which I mainly created to practice and try out the hot &amp; popular frameworks.
+This is deprecated right now, I moved my website to [Kire-Web](https://github.com/Erik-Eki/Kire-Web)
 
----
-
-## Tech stack
-
-# SSR
-
-- Vecrel
-
-## Frontend
-
-- Svelte
-- Windi CSS OR TailwindCSS
-
-## Backend
-
-- Astro
-- Javascript/Typescript
-- Algolia
-
-## Database
-
-- Firebase OR Supabase OR PocketBase
-
-## Build
-
-- Vite
-
-## Testing
-
-- Playwright
-- Hugo
+If I need to host on Github again, I'll reuse this one.
